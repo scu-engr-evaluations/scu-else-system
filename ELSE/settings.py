@@ -26,7 +26,7 @@ SECRET_KEY = 'p@zw^lka=n_pb1k06$v^$jqh5kzz=%5^z7m4x-4-d$!7i-cei3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["scu-else-system.herokuapp.com"]
+ALLOWED_HOSTS = ["scu-else.herokuapp.com"]
 
 
 # Application definition
@@ -87,7 +87,7 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'USER': 'admin',
         'PASSWORD': 'COEN.174',
-        'HOST': "scu-else-system.herokuapp.com"
+        'HOST': "scu-else.herokuapp.com"
     }
 }
 
@@ -148,8 +148,8 @@ DATABASES['default'].update(prod_db)
 
 REST_FRAMEWORK = {
 	'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny'
-        #'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+		'rest_framework.permissions.AllowAny'
+		#'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
 	]
 }
 
