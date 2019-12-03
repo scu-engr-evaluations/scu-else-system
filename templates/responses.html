@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>Responses</title>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <td>Question</td>
+            <td>Response</td>
+        </tr>
+        {% for response in responses %}
+        <tr>
+            <td>{{ response.question.prompt }}</td>
+            <td>{{ response.feedback }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</body>
+
+</html>

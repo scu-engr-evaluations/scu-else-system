@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>Questions</title>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <td>#</td>
+            <td>Question Text</td>
+        </tr>
+        {% for question in questions %}
+        <tr>
+            <td>{{ question.id }}</td>
+            <td>{{ question.prompt }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+    <form method="POST">
+        {% csrf_token %}
+        <h2>Add Question</h2>
+        <input type="input" name="question-text" />
+        <input type="submit" />
+    </form>
+</body>
+
+</html>

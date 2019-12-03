@@ -1,0 +1,37 @@
+* {
+	box-sizing: border-box;
+}
+
+.PageContainer {
+	padding: 2%;
+}
+
+.PageHeader {
+	text-align: center;
+	margin: 2%;
+}
+
+a {
+	color: #A5243B;
+}
+
+.btn-red {
+	background-color: #A5243B;
+	color: white;
+}
+
+.btn-red:hover {
+	background-color: #922935;
+	color: white;
+}
+
+.btn-gray {
+	background-color: #E5E5E5;
+	color: black;
+	border: 1px solid black;
+}
+
+.btn-gray:hover {
+	background-color: black;
+	color: white;
+}
