@@ -22,7 +22,7 @@ class AdminHome extends Component {
 
 	componentDidMount() {
 		//axios.get("http://127.0.0.1:8000/api/")
-		axios.get("http://scu-else-system.herokuapp.com/api/")
+		axios.get("http://scu-else.herokuapp.com/api/")
 			.then(res => {
 				this.setState({
 					rows: res.data
@@ -40,7 +40,7 @@ class AdminHome extends Component {
 		});
 
 		//axios.post("http://127.0.0.1:8000/api/", {
-		axios.post("http://scu-else-system.herokuapp.com/api/", {
+		axios.post("http://scu-else.herokuapp.com/api/", {
 			readOnly: true,
 			prompt: this.state.prompt,
 			questionType: this.state.questionType ? this.state.questionType : "RR",
@@ -67,7 +67,7 @@ class AdminHome extends Component {
 		var rows = [...this.state.rows];
 
 		//axios.delete(`http://127.0.0.1:8000/api/${dataID}/`);
-		axios.delete(`http://scu-else-system.herokuapp.com/api${dataID}/`);
+		axios.delete(`http://scu-else.herokuapp.com/api${dataID}/`);
 
 		rows.splice(id, 1);
 		this.setState({rows: rows});
@@ -87,7 +87,7 @@ class AdminHome extends Component {
 		rows[id].questionType = questionType;
 
 		//axios.put(`http://127.0.0.1:8000/api/${dataID}/`, {
-		axios.put(`http://scu-else-system.herokuapp.com/api/${dataID}/`, {
+		axios.put(`http://scu-else.herokuapp.com/api/${dataID}/`, {
 			readOnly: true,
 			prompt: prompt,
 			questionType: questionType,
